@@ -63,7 +63,7 @@ export default function SignupPage() {
           
           <div className="absolute inset-0 p-10 flex flex-col justify-between text-white">
             <div className="flex justify-between items-center">
-              <span className="text-2xl font-bold tracking-tighter">AniCompany</span>
+              <span className="text-2xl font-bold tracking-tighter">Tornage</span>
               <Link href="/" className="text-sm bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition flex items-center gap-2">
                 Back to website <span>→</span>
               </Link>
