@@ -52,7 +52,7 @@ export default function ForgotPasswordPage() {
           
           <div className="absolute inset-0 p-10 flex flex-col justify-between text-white">
             <div className="flex justify-between items-center">
-              <span className="text-2xl font-bold tracking-tighter">AniCompany</span>
+              <span className="text-2xl font-bold tracking-tighter">Tornage</span>
               <Link href="/" className="text-sm bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition">
                 Back to website →
               </Link>
@@ -62,11 +62,6 @@ export default function ForgotPasswordPage() {
               <h2 className="text-3xl font-medium leading-tight">
                 Secure Access,<br />Reliable Solutions
               </h2>
-              <div className="flex gap-2 mt-6">
-                <div className="w-6 h-1 bg-gray-600 rounded-full"></div>
-                <div className="w-10 h-1 bg-white rounded-full"></div>
-                <div className="w-6 h-1 bg-gray-600 rounded-full"></div>
-              </div>
             </div>
           </div>
         </div>
@@ -76,7 +71,7 @@ export default function ForgotPasswordPage() {
           <div className="max-w-md w-full mx-auto text-center md:text-left">
             <h1 className="text-4xl text-white font-semibold mb-2">Forgot Password</h1>
             <p className="text-gray-400 mb-8 text-sm">
-              Enter your email address and we'll send you a link to reset your password.
+              {"Enter your email address and we'll send you a link to reset your password."}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">

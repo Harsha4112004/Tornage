@@ -28,7 +28,7 @@ export default function LoginPage() {
         password: user.password,
       });
       toast.success("Login Successful");
-      router.push("/profile");
+      router.push("/dashboard");
     } catch (error: any) {
       if (error.response?.status === 401 || error.response?.status === 402) {
         toast.error("Invalid Credentials");
@@ -76,7 +76,7 @@ export default function LoginPage() {
           <div className="max-w-md w-full mx-auto">
             <h1 className="text-4xl text-white font-semibold mb-2">Welcome</h1>
             <p className="text-gray-400 mb-8 text-sm">
-              Dont have an account? <Link href="/signup" className="text-gray-200 underline underline-offset-4 hover:text-purple-400">Sign up</Link>
+              {"Don't have an account?"} <Link href="/signup" className="text-gray-200 underline underline-offset-4 hover:text-purple-400">Sign up</Link>
             </p>
 
             <form onSubmit={onLogin} className="space-y-4">
