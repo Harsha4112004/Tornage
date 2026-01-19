@@ -30,12 +30,19 @@ export default function LoginPage() {
       toast.success("Login Successful");
       router.push("/dashboard");
     } catch (error: any) {
-      if (error.response?.status === 401 || error.response?.status === 402) {
+      if (error.response?.status === 403) {
+        toast.error("Please verify your email first");
+        router.push(`/verify-email?email=${encodeURIComponent(user.email)}`);
+      } else if (
+        error.response?.status === 401 ||
+        error.response?.status === 402
+      ) {
         toast.error("Invalid Credentials");
       } else {
         toast.error("Something went wrong");
       }
-    } finally {
+    }
+    finally {
       setLoading(false);
     }
   };
@@ -102,7 +109,7 @@ export default function LoginPage() {
                   className="w-full bg-[#2d2839] text-white border border-transparent rounded-xl px-4 py-4 focus:outline-none focus:ring-1 focus:ring-purple-500 transition placeholder:text-gray-500"
                   required
                 />
-                
+
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
@@ -112,15 +119,15 @@ export default function LoginPage() {
                 </button>
               </div>
 
-            {/* Forgot Password Link */}
-<div className="flex justify-end mt-2">
-  <Link 
-    href="/forgot-password" 
-    className="text-s text-gray-400 hover:text-purple-400 transition"
-  >
-    Forgot password?
-  </Link>
-</div>
+              {/* Forgot Password Link */}
+              <div className="flex justify-end mt-2">
+                <Link
+                  href="/forgot-password"
+                  className="text-s text-gray-400 hover:text-purple-400 transition"
+                >
+                  Forgot password?
+                </Link>
+              </div>
 
               <button
                 type="submit"

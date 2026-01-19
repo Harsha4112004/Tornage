@@ -24,28 +24,27 @@ export default function SignupPage() {
   }, [user]);
 
   const onSignup = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await axios.post("/api/signup", user);
-      toast.success("Signup Successful");
-      router.push("/login");
-    } catch (err: any) {
-      if (err.response) {
-        if (err.response.status === 401) {
-          toast.error("Username already exists");
-        } else if (err.response.status === 402) {
-          toast.error("Email already exists");
-        } else {
-          toast.error("Signup Failed");
-        }
-      } else {
-        toast.error("Server error");
-      }
-    } finally {
-      setLoading(false);
+  e.preventDefault();
+  setLoading(true);
+
+  try {
+    await axios.post("/api/signup", user);
+
+    toast.success("Verification code sent to your email");
+    router.push(`/verify-email?email=${encodeURIComponent(user.email)}`);
+  } catch (err: any) {
+    if (err.response?.status === 401) {
+      toast.error("Username already exists");
+    } else if (err.response?.status === 402) {
+      toast.error("Email already exists");
+    } else {
+      toast.error("Signup failed");
     }
-  };
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-[#1a1625] flex items-center justify-center p-4 font-sans">

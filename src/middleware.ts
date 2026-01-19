@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
 
   // Logged in but trying to access login/signup → redirect home
   if (token && publicPaths.includes(pathname)) {
-    return NextResponse.redirect(new URL("/profile", request.url));
+    return NextResponse.redirect(new URL("/dashboard", request.url));
   }
 
   return NextResponse.next();

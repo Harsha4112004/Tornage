@@ -22,6 +22,8 @@ const userschema = new mongoose.Schema(
     forgotPasswordExpiry: { type: Date },
     verifyToken: { type: String },
     verifyTokenExpiry: { type: Date },
+    verifyOtp: { type: String },
+    verifyOtpExpiry: { type: Date },
     purchasedToolkits: {
       type: [String], 
       default: [],
