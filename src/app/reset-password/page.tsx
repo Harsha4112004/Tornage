@@ -1,5 +1,4 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -18,13 +17,10 @@ export default function ResetPasswordPage() {
   const [showPass, setShowPass] = useState(false);
 
   // Extract token from URL
-  const searchParams = useSearchParams();
-
-useEffect(() => {
-  const urlToken = searchParams.get("token");
-  setToken(urlToken || "");
-}, [searchParams]);
-
+  useEffect(() => {
+    const urlToken = window.location.search.split("=")[1];
+    setToken(urlToken || "");
+  }, []);
 
   // Validation Logic
   useEffect(() => {
