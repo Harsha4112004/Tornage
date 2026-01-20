@@ -103,7 +103,7 @@ export default function LandingPage() {
         <div className="bg-gradient-to-b from-[#2d2839] to-[#231f2e] rounded-3xl p-12 text-center border border-white/10">
           <h2 className="text-4xl font-bold mb-6">Ready to transform your business?</h2>
           <p className="text-gray-400 mb-10 max-w-lg mx-auto">
-            Build next-generation applications with AniCompany’s AI-powered platform
+            Build next-generation applications with Tornage’s AI-powered platform
           </p>
           <Link href="/signup" className="inline-flex h-14 pt-4 px-10 rounded-xl bg-white text-[#1a1625] font-bold hover:bg-gray-200 transition">
             Get Started Now
@@ -114,9 +114,9 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-white/5 bg-[#1a1625]">
         <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-xl font-bold tracking-tighter">AniCompany</div>
+          <div className="text-xl font-bold tracking-tighter">Tornage</div>
           <div className="text-sm text-gray-500">
-            © 2026 AniCompany Inc. All rights reserved.
+            © 2026 Tornage Inc. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm text-gray-400">
             <Link href="#" className="hover:text-white transition">Privacy</Link>

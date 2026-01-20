@@ -144,7 +144,7 @@ export default function LoginPage() {
                 <span className="w-full border-t border-gray-800"></span>
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-[#231f2e] px-4 text-gray-500 tracking-widest">Or loginin with</span>
+                <span className="bg-[#231f2e] px-4 text-gray-500 tracking-widest">Or login with</span>
               </div>
             </div>
 
