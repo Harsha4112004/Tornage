@@ -29,14 +29,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* ✅ Puter must load BEFORE React uses it */}
+        <Script
+          src="https://js.puter.com/v2/"
+          strategy="beforeInteractive"
+        />
+
         {children}
 
-        {/* ✅ Razorpay Script */}
+        {/* ✅ Razorpay Script (after UI is ready) */}
         <Script
           src="https://checkout.razorpay.com/v1/checkout.js"
           strategy="afterInteractive"
         />
 
+        {/* ✅ Toasts */}
         <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>

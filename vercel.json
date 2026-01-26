@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/jobposting/cron?secret=TornageCronSecret0804",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}
